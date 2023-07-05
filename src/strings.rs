@@ -7,10 +7,10 @@ fn exercise1(color: &str) -> String {
 // Exercise 2
 // Fix all errors without adding newline
 fn exercise2() -> String {
-    let s = String::from("hello");
+    let mut s = String::from("hello");
     s.push(',');
-    s.push(" world");
-    s += "!".to_string();
+    s.push_str(" world");
+    s.push('!');
     s
 }
 // Exercise 3
@@ -18,7 +18,7 @@ fn exercise2() -> String {
 fn exercise3() -> String {
     let s1 = String::from("hello,");
     let s2 = String::from("world!");
-    let s3 = s1 + s2;
+    let s3 = format!("{}{}", s1, s2);
     s3
 }
 
